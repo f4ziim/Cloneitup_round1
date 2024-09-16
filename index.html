@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <title>CourzGen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <script> 
+    tailwind.config = {
+      theme: {
+        extend: {
+            height: {
+        '400': '400px',
+      },
+          colors: {
+            customGray: '#263238',
+            lightGreen: '#43A046',
+            primary:'#28CB8B',
+            grayShade:'#717171',
+            lightBlack:'#263238',
+            tint:'#E8F5E9',
+            l_grey:'#89939E',
+            d_grey:'#4D4D4D',
+            placeholder_bg:'#505b61',
+          }
+        }
+      }
+    }
+  </script>
+
+   <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="m-0">
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between flex-wrap bg-white p-6">
+        <div class="flex items-center pr-40 flex-shrink-0  mr-6 ml-6 ">
+          <img src="images/Switch Mode=NO.png" alt="" class="w-34" >
+        </div>
+        <div class="block lg:hidden">
+          <button id="toggleButton" class="flex items-center px-3 py-2 border rounded text-lightGreen border-lightGreen hover:text-white hover:border-lightGreen hover:bg-lightGreen">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+        <div id="toggleContent" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a href="#home" class="block mt-4 text-customGray lg:inline-block lg:mt-0   hover:text-black hover:underline mr-6">
+              Home
+            </a>
+            <a href="#services" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
+              Services
+            </a>
+            <a href="#feature" class="block mt-4 text-customGray lg:inline-block lg:mt-0 hover:text-black hover:underline mr-6">
+              Feature
+            </a>
+            <a href="#product" class="block mt-4 text-customGray lg:inline-block lg:mt-0 hover:text-black hover:underline mr-6">
+              Product
+            </a>
+            <a href="#testimonial" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
+              Testimonial
+              </a>
+            <a href="#contact" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
+                FAQ
+            </a>
+            <a href="#contact" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
+                Contact
+            </a>
+          </div>
+          <div class="pr-8">
+            <a href="#login" class="inline-block text-sm px-4 py-2 leading-none border rounded text-lightGreen border-lightGreen hover:border-transparent hover:text-white hover:bg-lightGreen mt-4 lg:mt-0" onclick="openModal('loginModal')">Login</a>
+            <a href="#signup" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-lightGreen hover:border-transparent hover:text-green bg-lightGreen hover:bg-lightBlack mt-4 lg:mt-0" onclick="openModal('signupModal')">Signup</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Slider -->
+      <div id="home" class="carousel-container w-full h-screen flex items-center justify-center bg-gray-100">
+        <div class="carousel-inner">
+          <div class="carousel-item flex items-center">
+            <div class="w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
+              <h1 class="text-4xl  font-bold  mb-4 text-lightBlack">Lessons and insights</h1>
+              <h1 class="text-4xl  text-lightGreen font-bold mb-6">from 8  years.</h1>
+              <p class="text-grayShade">Where to grow your  business as a photographer: site or social media?</p><br>
+              <a href="#register" class="btn  px-6 py-3 rounded-lg border rounded text-lightGreen border-lightGreen hover:border-transparent hover:text-white hover:bg-lightGreen">
+                Register
+              </a>
+            </div>
+            <div class="w-1/2">
+              <img src="images/Hero Carousel.png" alt="Slide 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+          </div>
+          <div class="carousel-item flex items-center">
+            <div class="w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
+                <h1 class="text-4xl  font-bold  mb-4 text-lightBlack">Lessons and insights</h1>
+                <h1 class="text-4xl  text-lightGreen font-bold mb-6">from 8  years.</h1>
+                <p class="text-grayShade">Where to grow your  business as a photographer: site or social media?</p><br>
+              <a href="#register" class="btn  px-6 py-3 rounded-lg border rounded text-lightGreen border-lightGreen hover:border-transparent hover:text-white hover:bg-lightGreen">
+                Register
+              </a>
+            </div>
+            <div class="w-1/2">
+              <img src="images/feature1carousel.png" alt="Slide 2" class="w-full h-full object-cover rounded-lg">
+            </div>
+          </div>
+          <div class="carousel-item flex items-center">
+            <div class="w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
+                <h1 class="text-4xl  font-bold  mb-4 text-lightBlack">Lessons and insights</h1>
+                <h1 class="text-4xl  text-lightGreen font-bold mb-6">from 8  years.</h1>
+                <p class="text-grayShade">Where to grow your  business as a photographer: site or social media?</p><br>
+              <a href="#register" class="btn  px-6 py-3 rounded-lg border rounded text-lightGreen border-lightGreen hover:border-transparent hover:text-white hover:bg-lightGreen">
+                Register
+              </a>
+            </div>
+            <div class="w-1/2">
+              <img src="images/feature2carousel.png" alt="Slide 2" class="w-full h-full object-cover rounded-lg">
+            </div>
+          </div>
+          
+        </div>
+    
+        <!-- Dots -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex">
+        </div>
+      </div>
+ <!--Client Section  -->
+ <div class="flex flex-col items-center justify-center mt-10">
+    <h1 class="text-4xl font-bold text-gray-800 mb-2">
+      Our Clients
+    </h1>
+    <p class="text-lg text-gray-600 text-sm">
+      We have been working with some Fortune 500+ Clients
+    </p>
+    <img src="images/clienticons.png" alt="">
+  </div>
+  <!-- About  -->
+  <div id="services" class="flex flex-col items-center justify-center mt-20">
+    <h1 class="text-4xl font-bold text-gray-800 mb-2 text-center">
+      Manage your entire community <br>in a single system
+    </h1>
+    
+    <p class="text-lg text-gray-600 text-sm">
+      Who is Nextcent suitable for?
+    </p>
+   </div>
+   
+   <div class="container mx-auto px-4 mt-10">
+    <!-- Flex Container -->
+    <div class="flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0 lg:space-x-6">
+      <!-- Left-Aligned Card -->
+      <div class="shadow-lg w-full lg:w-1/3 flex flex-col">
+        <div class="flex flex-col items-center">
+          <img class="w-30" src="images/memblogo.png" alt="Logo">
+        </div>
+        <div class="px-6 py-4 text-center">
+          <div class="font-bold text-2xl mb-1 text-customGray">Membership</div>
+          <h1 class="font-bold text-2xl text-customGray">Organisations</h1>
+          <p class="text-grayShade text-sm">
+            Our membership management <br> software provides full automation of <br>membership renewals and payments.
+          </p>
+        </div>
+      </div>
+
+      <!-- Center-Aligned Card -->
+      <div class="shadow-lg w-full lg:w-1/3 flex flex-col">
+        <div class="flex flex-col items-center">
+          <img class="w-30" src="images/buildings.png" alt="Logo">
+        </div>
+        <div class="px-6 py-4 text-center">
+          <div class="font-bold text-2xl mb-1 text-customGray">National</div>
+          <h1 class="font-bold text-2xl text-customGray">Associations</h1>
+          <p class="text-grayShade text-sm">Our membership management <br> software provides full automation of <br> membership renewals and payments.
+            
+          </p>
+        </div>
+      </div>
+
+      <!-- Right-Aligned Card -->
+      <div class="shadow-lg w-full lg:w-1/3 flex flex-col">
+        <div class="flex flex-col items-center">
+          <img class="w-30" src="images/clublogo.png" alt="Logo">
+        </div>
+        <div class="px-6 py-4 text-center">
+          <div class="font-bold text-2xl mb-1 text-customGray">Clubs<br> And Groups</div>
+          <p class="text-grayShade text-sm">
+            Our membership management <br> software provides full automation of <br> membership renewals and payments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- next section -->
+  <div class="container mx-auto px-4 mt-10">
+    <div class="flex items-center">
+      <!-- Left Side  -->
+      <div class="w-1/2 pr-4">
+        <img class="w-full h-auto " src="images/feature1carousel.png" >
+      </div>
+      <!-- Right Side text -->
+      <div class="w-1/2 pl-4">
+        <h2 class="text-3xl font-bold text-customGray mb-4">The unseen of spending three years at Pixelgrade</h2>
+        <p class="text-gray-600 mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nobis? Labore, voluptates optio. 
+          Facilis, tempora inventore? Eius quaerat at blanditiis consequatur doloribus.
+        </p>
+        <a href="#learn-more" class="inline-block border-lightGreen border rounded  text-white bg-lightGreen font-semibold py-2 px-4 rounded-lg shadow hover:bg-lightBlack hover:text-white transition duration-300">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Counting Section -->
+  <div id="feature" class="container mx-auto px-4 mt-3 bg-gray-100 pt-20">
+    <div class="flex flex-wrap">
+      <!-- Left Side Content -->
+      <div class="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 lg:pl-20">
+        <h2 class="text-3xl font-bold text-customGray mb-4 mt-8">Helping a local </h2>
+        <h2 class="text-3xl font-bold text-lightGreen mb-4">business reinvent itself.</h2>
+        <p class="text-gray-600 mb-6">
+          We reached here with our hard work and dedication
+        </p>
+      </div>
+
+      <!-- Right Side Countdown Box -->
+      <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Countdown Box 1 -->
+        <div class="countdown-box">
+          <img class="countdown-image" src="images/membersclub.png" alt="memberslogo">
+          <div class="box-content">
+            <div class="countdown-number" id="countdown1">0</div>
+            <div class="text-gray-700">Members</div>
+          </div>
+        </div>
+
+        <!-- Countdown Box 2 -->
+        <div class="countdown-box">
+          <img class="countdown-image" src="images/countclub.png" alt="Box Image 2">
+          <div class="box-content">
+            <div class="countdown-number" id="countdown2">0</div>
+            <div class="text-gray-700">Clubs</div>
+          </div>
+        </div>
+
+        <!-- Countdown Box 3 -->
+        <div class="countdown-box">
+          <img class="countdown-image" src="images/calendarlogo.png" alt="Box Image 3">
+          <div class="box-content">
+            <div class="countdown-number" id="countdown3">0</div>
+            <div class="text-gray-700">Event Bookings</div>
+          </div>
+        </div>
+
+        <!-- Countdown Box 4 -->
+        <div class="countdown-box">
+          <img class="countdown-image" src="images/paymentlogo.png" alt="Box Image 4">
+          <div class="box-content">
+            <div class="countdown-number" id="countdown4">0</div>
+            <div class="text-gray-700">Payments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- after counting section -->
+  <div class="container mx-auto px-4 mt-10">
+    <div class="flex items-center">
+      <!-- Left Side Image -->
+      <div class="w-1/2 pr-4">
+        <img class="w-full h-auto " src="images/feature2carousel.png" >
+      </div>
+      <!-- Right Side Content -->
+      <div class="w-1/2 ">
+        <h2 class="text-3xl font-bold text-customGray mb-4">How to design your site footer like <br> we did</h2>
+        <p class="text-gray-600 mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+        </p>
+        <a href="#learn-more" class="inline-block border-lightGreen border rounded  text-white bg-lightGreen font-semibold py-2 px-4 rounded-lg shadow hover:bg-lightBlack hover:text-white transition duration-300">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial Section -->
+  <div id="testimonial" class="container mx-auto px-4 mt-10 bg-gray-100 pt-20">
+    <div class="flex flex-wrap">
+      <!-- Left Side: Image -->
+      <div class="w-full lg:w-1/3 mb-10 lg:mb-0 lg:pr-8 flex justify-center">
+        <img class="w-45 h-[300px] rounded-lg" src="images/smithcompany.png" alt="Left Side Image">
+      </div>
+
+      <!-- Right Side: Text, Image,and Button -->
+      <div class="w-full lg:w-2/3">
+        <div class="mb-4">
+          <p class="text-gray-600 mb-4">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing dolore magna aliquanostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          </p>
+
+          <h3 class="font-bold text-lightGreen">Tim Smith</h3>
+          <p class="text-gray-600">British Dragon Boat Racing Association</p>
+        </div>
+        
+        <!-- Flex container for wide image and button -->
+        <div class="flex items-center mb-[35px]">
+          <img class="wide-image flex-wrap" src="images/wideimage.png" alt="Wide Image">
+          <a href="#" class="button ml-11 text-lightGreen font-bold">
+            Meet all customers
+            <svg class="w-5 h-5 text-lightGreen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- blog section -->
+ <div id="product" class="flex flex-col items-center justify-center mt-10">
+    <h1 class="text-4xl font-bold text-grayShade mb-8">
+      Caring is the new marketing
+    </h1>
+    <p class="text-lg text-grayShade text-sm">
+      The Nexcent blog is the best place to read about the latest membership insights,<br>trens and more.See who's joining the community,read about how our community 
+    </p>
+    <p class="text-lg text-grayShade text-sm">are increasing their membership income and lot's more.</p>
+   
+  </div>
+   <!-- Container for the images and cards -->
+   <div class="container mx-auto px-4 py-16">
+    <div class="flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0 lg:space-x-6">
+      
+      <!-- Card 1 -->
+      <div class="w-full lg:w-1/3 flex flex-col">
+        <img class="w-full h-[272px] rounded-lg shadow-lg" src="https://burst.shopifycdn.com/photos/macbook-air-on-desk.jpg?width=1000&format=pjpg&exif=0&iptc=0" alt="Image 1">
+        <div class="card p-4 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold text-gray-700 mb-2">Creating Streamlined Safeguarding Processes</h3>
+          <h3 class="text-lg font-bold text-gray-700 mb-2">with OneRen</h3>
+          <a href="#" class="text-green-600 border border-green-600 rounded-lg px-4 py-2 inline-block mt-auto hover:bg-green-600 hover:text-white transition">Read more →</a>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="w-full lg:w-1/3 flex flex-col">
+        <img class="w-full h-[272px] rounded-lg shadow-lg" src="https://www.theneweconomy.com/wp-content/uploads/2020/06/B051-remote-working-coronavirus-technology-scaled.jpg" alt="Image 2">
+        <div class="card p-4 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold text-gray-700 mb-2">What are your safeguarding responsibilities and how can you manage them</h3>
+          <a href="#" class="text-green-600 border border-green-600 rounded-lg px-4 py-2 inline-block mt-auto hover:bg-green-600 hover:text-white transition">Read more →</a>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="w-full lg:w-1/3 flex flex-col">
+        <img class="w-full h-[272px] rounded-lg shadow-lg" src="https://images.everydayhealth.com/images/arthritis/ankylosing-spondylitis/cs-prevent-as-back-pain-working-from-home-1440x810.jpg" alt="Image 3">
+        <div class="card p-4 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold text-gray-700 mb-2">Revamping the Membership Model with Triathlon Australia</h3>
+          <a href="#" class="text-green-600 border border-green-600 rounded-lg px-4 py-2 inline-block mt-auto hover:bg-green-600 hover:text-white transition">Read more →</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  <!-- App Section -->
+  <div class="flex flex-col items-center justify-center mt-10 bg-gray-100">
+    <h1 class="text-5xl font-bold text-lightBlack mb-8 pt-12">
+      Wanna try our app?
+    </h1>
+    <a href="#" class="text-white border bg-lightGreen border-green-600 rounded-lg px-4 py-2 inline-block hover:bg-lightBlack hover:text-white transition mb-[60px]">Get a demo →</a>
+    
+   
+  </div>
+  <!-- Contact and form -->
+    
+  <div id="contact" class="container mx-auto px-4 py-16">
+    <div class="flex flex-wrap">
+
+      <!-- Left Side: Image -->
+      <div class="w-full lg:w-1/2 flex flex-col justify-center lg:items-start mb-10 lg:mb-0">
+        <h1 class="text-6xl font-bold text-gray-800 lg:pl-[100px] mb-[10px]">Have questions?</h1>
+        <h1 class="text-3xl font-bold text-gray-800 lg:pl-[100px] mb-[60px]">Shoot us an email.</h1>
+
+        <img class="w-2/3 lg:w-1/2 h-auto rounded-lg lg:ml-[100px] mb-6" src="images/contactlogo.png" alt="Left Side Image">
+        
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg ">
+        
+        <form action="#" method="POST">
+          <div class="mb-4">
+            <input type="text" id="name" name="name" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-lightGreen" required>
+          </div>
+          <div class="mb-4">
+            <input type="email" id="email" name="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+          </div>
+          <div class="mb-4">
+            <textarea id="message" name="message" rows="4" placeholder="Type Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
+          </div>
+          <button type="submit" class="w-full bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition duration-200">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <!-- Footer -->
+<footer class="bg-lightBlack text-gray-300 py-10">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Column 1: Logo -->
+      <div class="flex flex-col items-start">
+        <img src="images/Switch Mode=YES.png" alt="Company Logo" class="w-40 mb-7 lg:ml-[40px]">
+        <p class="text-gray-400 text-sm lg:pl-[40px]">
+          Copyright &copy; 2024 Riglabs Collective<br> All rights reserved.
+        </p>
+        
+        <!-- Social Media Icons -->
+        <div class="flex mt-4 space-x-4 lg:pl-[40px]">
+          <a href="#" class="text-gray-400 hover:text-green-500">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-green-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-green-500">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-green-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Link -->
+      <div>
+        <h3 class="text-white font-bold mb-6">Company</h3>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">About Us</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Blog</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Contact us</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Pricing</a></li>
+          <li class=""><a href="#" class="hover:text-green-500">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support -->
+      <div>
+        <h3 class="text-white font-bold mb-6">Support</h3>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Help Center</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Terms of service</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Legal</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-green-500">Privacy Policy</a></li>
+          <li class=""><a href="#" class="hover:text-green-500">Status</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div>
+        <h3 class="text-white font-bold mb-6 ">Stay up to date</h3>        
+        <form action="#" method="POST" class="relative flex flex-col ">
+         <input type="email" placeholder="Your email address" class="bg-placeholder_bg text-white w-full mb-3 px-3 py-2 border rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-green-500">
+         <i class="fab fa-telegram-plane absolute right-3 top-3 text-white"></i>
+        </form>
+      </div>
+</div>
+  </div>
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-sm relative">
+   
+    <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" onclick="closeModal('loginModal')">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <h2 class="text-xl text-lightGreen font-bold mb-4">Login</h2>
+    <form>
+      <div class="mb-4">
+        <label for="login-username" class="block text-gray-700">Username</label>
+        <input type="text" id="login-username" name="username" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-lightGreen" required>
+      </div>
+      <div class="mb-6">
+        <label for="login-password" class="block text-gray-700">Password</label>
+        <input type="password" id="login-password" name="password" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-lightGreen" required>
+      </div>
+      <button type="submit" class="w-full bg-lightGreen text-white py-2 rounded-md hover:bg-green-700">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-sm relative">
+   
+    <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" onclick="closeModal('signupModal')">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <h2 class="text-xl font-bold text-lightGreen mb-4">Sign Up</h2>
+    <form>
+      <div class="mb-4">
+        <label for="signup-username" class="block text-gray-700">Username</label>
+        <input type="text" id="signup-username" name="username" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-lightGreen" required>
+      </div>
+      <div class="mb-4">
+        <label for="signup-email" class="block text-gray-700">Email</label>
+        <input type="email" id="signup-email" name="email" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-lightGreen" required>
+      </div>
+      <div class="mb-6">
+        <label for="signup-password" class="block text-gray-700">Password</label>
+        <input type="password" id="signup-password" name="password" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-lightGreen" required>
+      </div>
+      <button type="submit" class="w-full bg-lightGreen text-white py-2 rounded-md hover:bg-green-700">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<script src="toggle.js"></script>
+      <script src="carousel.js"></script>
+      <script src="countboxes.js"></script>
+      <script src="loginpopup.js"></script>
+
+    </body>
+</html>

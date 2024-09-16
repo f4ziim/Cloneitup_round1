@@ -1,0 +1,84 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  .dot.active {
+    background-color: #43A046;
+  }
+  .countdown-box {
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  
+    display: flex;
+    align-items: center;
+  }
+  .countdown-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+  }
+  .countdown-number {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .box-content {
+    text-align: center;
+  }
+
+  .button {
+    
+    
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .button:hover {
+    text-decoration: underline;
+    text-decoration-color: #43A046;
+  }
+  .button svg {
+    margin-left: 0.5rem;
+  }
+  .wide-image {
+    width: 50%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  .card {
+    position: relative;
+    top: -40px; /* Moves the card slightly upwards to overlap the image */
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 80%; /* Make the card smaller */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
