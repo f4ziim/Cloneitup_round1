@@ -71,10 +71,10 @@
             <a href="#testimonial" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
               Testimonial
               </a>
-            <a href="#contact" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
+            <a href="faq.html" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
                 FAQ
             </a>
-            <a href="#contact" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
+            <a href="#testimonial" class="block mt-4 text-customGray lg:inline-block lg:mt-0  hover:text-black hover:underline mr-6">
                 Contact
             </a>
           </div>
@@ -85,10 +85,12 @@
         </div>
       </nav>
       <!-- Slider -->
-      <div id="home" class="carousel-container w-full h-screen flex items-center justify-center bg-gray-100">
+     
+      
+      <div id="home" class="carousel-container w-full min-h-screen flex items-center justify-center bg-gray-100"> 
         <div class="carousel-inner">
           <div class="carousel-item flex items-center">
-            <div class="w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
+            <div class="lg:w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
               <h1 class="text-4xl  font-bold  mb-4 text-lightBlack">Lessons and insights</h1>
               <h1 class="text-4xl  text-lightGreen font-bold mb-6">from 8  years.</h1>
               <p class="text-grayShade">Where to grow your  business as a photographer: site or social media?</p><br>
@@ -96,12 +98,12 @@
                 Register
               </a>
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2">
               <img src="images/Hero Carousel.png" alt="Slide 1" class="w-full h-full object-cover rounded-lg">
             </div>
           </div>
           <div class="carousel-item flex items-center">
-            <div class="w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
+            <div class="lg:w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
                 <h1 class="text-4xl  font-bold  mb-4 text-lightBlack">Lessons and insights</h1>
                 <h1 class="text-4xl  text-lightGreen font-bold mb-6">from 8  years.</h1>
                 <p class="text-grayShade">Where to grow your  business as a photographer: site or social media?</p><br>
@@ -109,12 +111,12 @@
                 Register
               </a>
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2">
               <img src="images/feature1carousel.png" alt="Slide 2" class="w-full h-full object-cover rounded-lg">
             </div>
           </div>
           <div class="carousel-item flex items-center">
-            <div class="w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
+            <div class="lg:w-1/2 h-400 p-8 bg-gray-100  rounded-lg">
                 <h1 class="text-4xl  font-bold  mb-4 text-lightBlack">Lessons and insights</h1>
                 <h1 class="text-4xl  text-lightGreen font-bold mb-6">from 8  years.</h1>
                 <p class="text-grayShade">Where to grow your  business as a photographer: site or social media?</p><br>
@@ -122,7 +124,7 @@
                 Register
               </a>
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2">
               <img src="images/feature2carousel.png" alt="Slide 2" class="w-full h-full object-cover rounded-lg">
             </div>
           </div>
@@ -200,28 +202,30 @@
     </div>
   </div>
   <!-- next section -->
-  <div class="container mx-auto px-4 mt-10">
-    <div class="flex items-center">
-      <!-- Left Side  -->
-      <div class="w-1/2 pr-4">
-        <img class="w-full h-auto " src="images/feature1carousel.png" >
-      </div>
-      <!-- Right Side text -->
-      <div class="w-1/2 pl-4">
-        <h2 class="text-3xl font-bold text-customGray mb-4">The unseen of spending three years at Pixelgrade</h2>
-        <p class="text-gray-600 mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nobis? Labore, voluptates optio. 
-          Facilis, tempora inventore? Eius quaerat at blanditiis consequatur doloribus.
-        </p>
-        <a href="#learn-more" class="inline-block border-lightGreen border rounded  text-white bg-lightGreen font-semibold py-2 px-4 rounded-lg shadow hover:bg-lightBlack hover:text-white transition duration-300">
-          Learn More
-        </a>
-      </div>
+  
+<div class="container mx-auto px-4 mt-10">
+  <div class="flex flex-col md:flex-row items-center">
+    <!-- Left Side (Image) -->
+    <div class="w-full md:w-1/2 pr-0 md:pr-4 mb-6 md:mb-0">
+      <img class="w-full h-auto" src="images/feature1carousel.png" alt="Feature image">
+    </div>
+    <!-- Right Side (Text) -->
+    <div class="w-full md:w-1/2 pl-0 md:pl-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-customGray mb-4">The unseen of spending three years at Pixelgrade</h2>
+      <p class="text-gray-600 mb-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nobis? Labore, voluptates optio.
+        Facilis, tempora inventore? Eius quaerat at blanditiis consequatur doloribus.
+      </p>
+      <a href="#learn-more" class="inline-block border-lightGreen border rounded text-white bg-lightGreen font-semibold py-2 px-4 rounded-lg shadow hover:bg-lightBlack hover:text-white transition duration-300">
+        Learn More
+      </a>
     </div>
   </div>
+</div>
+
   <!-- Counting Section -->
   <div id="feature" class="container mx-auto px-4 mt-3 bg-gray-100 pt-20">
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap bg-gray-100">
       <!-- Left Side Content -->
       <div class="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 lg:pl-20">
         <h2 class="text-3xl font-bold text-customGray mb-4 mt-8">Helping a local </h2>
@@ -273,23 +277,26 @@
   </div>
   <!-- after counting section -->
   <div class="container mx-auto px-4 mt-10">
-    <div class="flex items-center">
+    <div class="flex flex-col md:flex-row items-center">
       <!-- Left Side Image -->
-      <div class="w-1/2 pr-4">
-        <img class="w-full h-auto " src="images/feature2carousel.png" >
+      <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-4">
+        <img class="w-full h-auto" src="images/feature2carousel.png" alt="Feature image">
       </div>
       <!-- Right Side Content -->
-      <div class="w-1/2 ">
-        <h2 class="text-3xl font-bold text-customGray mb-4">How to design your site footer like <br> we did</h2>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-2xl md:text-3xl font-bold text-customGray mb-4">
+          How to design your site footer like <br> we did
+        </h2>
         <p class="text-gray-600 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
         </p>
-        <a href="#learn-more" class="inline-block border-lightGreen border rounded  text-white bg-lightGreen font-semibold py-2 px-4 rounded-lg shadow hover:bg-lightBlack hover:text-white transition duration-300">
+        <a href="#learn-more" class="inline-block border-lightGreen border rounded text-white bg-lightGreen font-semibold py-2 px-4 rounded-lg shadow hover:bg-lightBlack hover:text-white transition duration-300">
           Learn More
         </a>
       </div>
     </div>
   </div>
+  
   <!-- Testimonial Section -->
   <div id="testimonial" class="container mx-auto px-4 mt-10 bg-gray-100 pt-20">
     <div class="flex flex-wrap">
@@ -327,10 +334,10 @@
     <h1 class="text-4xl font-bold text-grayShade mb-8">
       Caring is the new marketing
     </h1>
-    <p class="text-lg text-grayShade text-sm">
-      The Nexcent blog is the best place to read about the latest membership insights,<br>trens and more.See who's joining the community,read about how our community 
-    </p>
-    <p class="text-lg text-grayShade text-sm">are increasing their membership income and lot's more.</p>
+    <p class="text-lg text-center text-grayShade text-sm pl-[40px] pr-[40px]">
+      The Nexcent blog is the best place to read about the latest membership insights, trens and more. <br>See who's joining the community, read about how our community 
+    
+    are increasing their membership income and lot's more.</p>
    
   </div>
    <!-- Container for the images and cards -->
@@ -378,39 +385,7 @@
     
    
   </div>
-  <!-- Contact and form -->
-    
-  <div id="contact" class="container mx-auto px-4 py-16">
-    <div class="flex flex-wrap">
 
-      <!-- Left Side: Image -->
-      <div class="w-full lg:w-1/2 flex flex-col justify-center lg:items-start mb-10 lg:mb-0">
-        <h1 class="text-6xl font-bold text-gray-800 lg:pl-[100px] mb-[10px]">Have questions?</h1>
-        <h1 class="text-3xl font-bold text-gray-800 lg:pl-[100px] mb-[60px]">Shoot us an email.</h1>
-
-        <img class="w-2/3 lg:w-1/2 h-auto rounded-lg lg:ml-[100px] mb-6" src="images/contactlogo.png" alt="Left Side Image">
-        
-      </div>
-
-      <!-- Right Side: Form -->
-      <div class="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg ">
-        
-        <form action="#" method="POST">
-          <div class="mb-4">
-            <input type="text" id="name" name="name" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-lightGreen" required>
-          </div>
-          <div class="mb-4">
-            <input type="email" id="email" name="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-          </div>
-          <div class="mb-4">
-            <textarea id="message" name="message" rows="4" placeholder="Type Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
-          </div>
-          <button type="submit" class="w-full bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition duration-200">Submit</button>
-        </form>
-      </div>
-
-    </div>
-  </div>
   <!-- Footer -->
 <footer class="bg-lightBlack text-gray-300 py-10">
   <div class="container mx-auto px-4">

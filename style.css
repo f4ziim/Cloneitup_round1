@@ -1,7 +1,11 @@
 .carousel-container {
     position: relative;
     overflow: hidden;
+    height: auto;
   }
+ 
+
+ 
   .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
